@@ -1,0 +1,21 @@
+module "VirtualMachine" {
+  for_each               = var.VirtualMachine
+  source    = "../modules/VirtualMachine"
+  resource_group        = each.value.resource_group
+  location = each.value.location
+  vnet = each.value.vnet
+  subnet = each.value.subnet
+  address_space = each.value.address_space
+  address_prefixes = each.value.address_prefixes
+  prefix = each.value.prefix
+  publisher = each.value.publisher
+  offer = each.value.offer
+  sku = each.value.sku
+  name = each.value.name
+  caching = each.value.caching
+  create_option = each.value.create_option
+  managed_disk_type = each.value.managed_disk_type
+  computer_name = each.value.computer_name
+  admin_username = each.value.admin_username
+  admin_password = each.value.admin_password
+}
