@@ -1,6 +1,6 @@
 VirtualMachine = {
   
-  "VM" = {
+  "VM01" = {
    location  = "eastus"
    resource_group    = "subash-rg"
    vnet = "subashvnet"
@@ -11,11 +11,11 @@ VirtualMachine = {
    publisher = "MicrosoftWindowsServer"
    offer     = "WindowsServer"
    sku       = "2019-Datacenter"
-   name              = "pfedisktest"
+   name              = "pfedisktest01"
    caching           = "ReadWrite"
    create_option     = "FromImage"
    managed_disk_type = "Standard_LRS"
-   computer_name  = "hostname"
+   computer_name  = "hostname01"
    admin_username = "testadmin"
    admin_password = "Password1234!"       
   }
